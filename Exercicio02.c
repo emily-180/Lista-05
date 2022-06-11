@@ -1,5 +1,5 @@
 #include <stdio.h>
-int potencia(exp, base){
+int potencia(int exp, int base){
 	int res=1, cont;
 	for(cont=1; cont<=exp; cont++){		
 		res =  base * res;	
@@ -12,5 +12,5 @@ int main(){
 	printf("Digite a base e o seu exponte: ");
 	scanf("%d%d", &base, &exp);
 	res = potencia(exp, base);
-	printf("A potencia de %d ^%d = %d", base, exp, res);
+	printf("A potencia de %d ^ %d = %d", base, exp, res);
 }
