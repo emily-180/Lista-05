@@ -1,20 +1,22 @@
 #include <stdio.h>
-double pesoIdeal(double alt, char sexo){
-	int resultado;
-	if(sexo == "F")
-		return resultado = 62.1 * alt - 44.7;
-	else if (sexo == "M")
-		return resultado =  72.7 * alt - 58;	 
+
+float pesoIdeal(float alt, int sexo){
+	float resultado;
+	if(sexo == 0)
+		resultado = 62.1 * alt - 44.7;
+	else if (sexo == 1)
+		resultado =  72.7 * alt - 58;
+	return resultado;	 
 }
 //----------------------------------------------------
 int main(){
-	int res;
-	double alt;
-	char sexo;
-	printf("Digite o sexo (F/M): ");
-	scanf("%c", &sexo);
+	float res;
+	float alt;
+	int sexo;
+	printf("Digite o sexo (0/1): ");
+	scanf("%d", &sexo);
 	printf("Digite a altura: ");
-	scanf("%lf", &alt);
+	scanf("%f", &alt);
     res = pesoIdeal(alt, sexo);
-	printf("\nPeso ideal: %lf", res);
+	printf("\nPeso ideal: %f", res);
 }
