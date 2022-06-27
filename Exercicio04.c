@@ -3,13 +3,13 @@ int fibonacci(int quant){
 	int res, ant=1, atual=1, cont;
 	printf("%d\n", ant);
 	res= atual;
-	for(cont=1; res <= quant; cont++){	
+	for(cont=1; res < quant; cont++){	
 		printf("%d\n", res);
 		res = atual + ant ;
 		ant = atual;
 		atual = res;
 	}
-	return 0;
+	
 }
 //----------------------------------------------------
 int main(){
@@ -17,5 +17,5 @@ int main(){
 	printf("Digite a quantidade: ");
 	scanf("%d", &quant);
 	res = fibonacci(quant);
-	printf(res);
+	printf("%d",res);
 }
